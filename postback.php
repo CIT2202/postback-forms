@@ -2,7 +2,6 @@
 $validForm = true;
 $formSubmitted = true;
 $email = "";
-$fullname = "";
 if(isset($_POST["submit"])){
 
   if(empty($_POST["email"])){
@@ -11,11 +10,6 @@ if(isset($_POST["submit"])){
     $email = $_POST["email"];
   }
 
-  if(empty($_POST["fullname"])){
-    $validForm = false;
-  }else{
-    $fullname = $_POST["fullname"];
-  }
 
 }else{
   $formSubmitted = false;
@@ -36,7 +30,6 @@ if(isset($_POST["submit"])){
     //we have passed all the tests so we can display the form data
     echo "<p> Valid form.</p>";
     echo "<p> You entered an email address of {$email}.</p>";
-    echo "<p> You entered a fullname of {$fullname}.</p>";
   }else{
     echo "<p>You need to complete all the fields</p>";
   }
@@ -50,7 +43,7 @@ if(isset($_POST["submit"])){
 </div>
 <div>
 <label for="fullname">Full name:</label>
-<input type="text" id="fullname" name="fullname" value="<?php echo $fullname;?>">
+<input type="text" id="fullname" name="fullname">
 </div>
 <input type="submit" value="Submit the form" name="submit">
 </form>
