@@ -1,4 +1,4 @@
-# 'Postback' forms
+# Submitting a form to the same page
 Instead of having two separate pages, often we want to have a single page that displays the form and processes the data in the form. Here's a simple application that does this, the form processing and HTML form are in the same page.
 
 ```php
