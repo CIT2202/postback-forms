@@ -1,6 +1,5 @@
 <?php
 $validForm = true;
-$formSubmitted = true;
 $email = "";
 if(isset($_POST["submit"])){
 
@@ -9,10 +8,6 @@ if(isset($_POST["submit"])){
   }else{
     $email = $_POST["email"];
   }
-
-
-}else{
-  $formSubmitted = false;
 }
 
 
