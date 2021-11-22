@@ -1,10 +1,12 @@
 <?php
 $validForm = true;
 $email = "";
+$emailErrMsg = "";
 if(isset($_POST["submit"])){
 
   if(empty($_POST["email"])){
     $validForm = false;
+    $emailErrMsg = "You need to enter an email address";
   }else{
     $email = $_POST["email"];
   }
@@ -25,8 +27,7 @@ if(isset($_POST["submit"])){
     //we have passed all the tests so we can display the form data
     echo "<p> Valid form.</p>";
     echo "<p> You entered an email address of {$email}.</p>";
-  }else{
-    echo "<p>You need to complete all the fields</p>";
+    exit;
   }
 }
 ?>
@@ -35,6 +36,7 @@ if(isset($_POST["submit"])){
 <div>
 <label for="email">Email address:</label>
 <input type="text" id="email" name="email" value="<?php echo $email;?>">
+<span><?php echo $emailErrMsg;?></span>
 </div>
 <div>
 <label for="fullname">Full name:</label>
