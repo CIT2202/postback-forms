@@ -37,6 +37,8 @@ if(isset($_POST["submit"])){
     echo "<p> Valid form.</p>";
     echo "<p> You entered an email address of {$email}.</p>";
     echo "<p> You entered a fullname of {$fullname}.</p>";
+    echo "</body>";
+    echo "</html>";
     exit;
   }
 }
