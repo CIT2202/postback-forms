@@ -27,6 +27,8 @@ if(isset($_POST["submit"])){
     //we have passed all the tests so we can display the form data
     echo "<p> Valid form.</p>";
     echo "<p> You entered an email address of {$email}.</p>";
+    echo "</body>";
+    echo "</html>";
     exit;
   }
 }
