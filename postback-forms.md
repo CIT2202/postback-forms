@@ -3,15 +3,15 @@ Instead of having two separate pages, often we want to have a single page that d
 
 ```php
 <?php
-$msg="";
-$userAns="";
+$msg = "";
+$userAns = "";
 if(isset($_POST["answerBtn"]))
 {
-    $userAns=$_POST["capital"];
-    if($userAns===""){
+    $userAns = $_POST["capital"];
+    if($userAns === ""){
         $msg = "You need to answer the question";
     }else{
-        if($userAns==="Paris"){
+        if($userAns === "Paris"){
             $msg = "You are correct";
         }else{
             $msg = "You are wrong";
